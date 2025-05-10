@@ -14,7 +14,7 @@ class MSPyApp(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         
         # Set window title
-        self.setWindowTitle("MSPy - Manga and Novel Scraper")
+        self.setWindowTitle("MimiR - Manga and Novel Scraper")
         
         # Connect signals to slots
         self.ui.pushButton.clicked.connect(self.controllers.get_url_cover)
