@@ -15,8 +15,8 @@ class Graphic_operations:
         if not pixmap.isNull():
             # Scale pixmap to fit the graphics view while maintaining aspect ratio
             pixmap = pixmap.scaled(
-                self.app.ui.graphicsView.width() - 10, 
-                self.app.ui.graphicsView.height() - 10,
+                self.app.ui.coverGraphicsView.width() - 10, 
+                self.app.ui.coverGraphicsView.height() - 10,
                 QtCore.Qt.KeepAspectRatio, 
                 QtCore.Qt.SmoothTransformation
             )
@@ -37,7 +37,7 @@ class Graphic_operations:
         print("Fetching image done!")
         
         # Reset UI
-        self.app.ui.pushButton.setEnabled(True)
+        self.app.ui.getButton.setEnabled(True)
         QtWidgets.QApplication.restoreOverrideCursor()
         
         # Update the image if an image was downloaded

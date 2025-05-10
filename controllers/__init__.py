@@ -12,14 +12,14 @@ class Controllers:
         self.fetch_thread = None
     
     def get_url_cover(self):
-        url = self.app.ui.lineEdit.text().strip()
+        url = self.app.ui.urlLineEdit.text().strip()
         
         if not url:
             self.app.status_label.setText("Please enter a valid URL")
             return
         
         # Disable the button and change cursor to waiting
-        self.app.ui.pushButton.setEnabled(False)
+        self.app.ui.getButton.setEnabled(False)
         QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
         self.app.status_label.setText(f"Fetching: {url}")
         
